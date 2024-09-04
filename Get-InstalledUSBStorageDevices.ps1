@@ -19,3 +19,4 @@ foreach ($USBDevice in $USBDevices) {
 
 # Enumerating using Get-PnpDevice
 $USBStorageDevices = Get-PnpDevice -Class "USB" | Where-Object {$_.FriendlyName -like "USB Mass Storage Device*"} | Select-Object -ExpandProperty "InstanceID"
+$USBStorageDevices = Get-PnpDevice -FriendlyName "USB Mass Storage Device" | Select-Object -ExpandProperty InstanceID
