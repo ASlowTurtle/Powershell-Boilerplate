@@ -15,3 +15,4 @@ foreach ($USBDevice in $USBDevices) {
 
 
 # pnputil /remove-device "USB\VID_0951&PID_1666\E0D55EA574A8E420E8374D4C"
+# pnputil /enum-devices | select-string -Pattern "SWD\\WPDBUSENUM"
